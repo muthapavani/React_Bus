@@ -1,0 +1,167 @@
+/* Common styles */
+.app-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.app-header {
+  background-color: #2563eb;
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.welcome-text {
+  font-weight: 600;
+}
+
+/* Navigation for large screens */
+.nav-large {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-large a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-large a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-large button {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-large button:hover {
+  background: #1d4ed8;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Hamburger for small screens */
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none; /* hidden on large screens */
+}
+
+/* Sidebar for small screens */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 260px;
+  height: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 1002;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar button {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+  background: #1d4ed8;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* Main content */
+.app-main {
+  flex: 1;
+  padding: 1rem;
+  background: #f9fafb;
+}
+
+/* Responsive: small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-large {
+    display: none; /* hide large nav on small screens */
+  }
+
+  .sidebar {
+    width: 220px;
+    padding: 1.5rem;
+  }
+}
